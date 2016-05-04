@@ -1,0 +1,13 @@
+  <a data-ui-sref="postIndex">Post Index</a>
+  <h2>This is something resembling a post</h2>
+  <p>{{showVm.post.author}}</p>
+  <p>{{showVm.post.body}}</p>
+  <img data-ng-src="{{showVm.post.photoUrl}}"><br>
+
+  <form data-ng-submit="showVm.update()">
+    <input type="text"data-ng-model="showVm.post.author">
+    <input type="text"data-ng-model="showVm.post.body">
+    <input type="text"data-ng-model="showVm.post.photoUrl">
+    <button type="submit">Update Post</button>
+  </form>
+  <button data-ng-click="showVm.delete()" data-ui-sref="postIndex">delete</button>

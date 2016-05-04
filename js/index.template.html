@@ -1,0 +1,10 @@
+   <div data-ng-repeat="post in indexVm.posts"> <!-- post.id ...eventually  -->
+    <p><a data-ui-sref="postShow({id: $index})">{{post.author}}</a></p>
+  </div>
+
+  <form data-ng-submit="indexVm.create()">
+    <input type="text" data-ng-model="indexVm.newPost.author" placeholder="Author...">
+    <input type="text" data-ng-model="indexVm.newPost.body" placeholder="Body...">
+    <input type="text" data-ng-model="indexVm.newPost.photoUrl" placeholder="Photo...">
+    <button type="submit">Post</button>
+  </form>
